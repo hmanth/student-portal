@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dashboard</title>
+</head>
+<body>
+
+    <h1>Student Dashboard</h1>
+
+    <h2>Welcome, {{ user.name }}</h2>
+
+    <p><strong>Name:</strong> {{ user.name }}</p>
+
+    <p><strong>Email:</strong> {{ user.email }}</p>
+
+    <p><strong>Role:</strong> {{ user.role }}</p>
+
+    {% if user.role == "admin" %}
+        <a href="/admin">Admin Page</a>
+        <br><br>
+    {% endif %}
+
+    <form action="/logout" method="post">
+        <button type="submit">Logout</button>
+    </form>
+
+</body>
+</html>
